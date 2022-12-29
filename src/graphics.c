@@ -24,13 +24,13 @@ RenderContext render_context_create() {
     RenderContext c = {};
 
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-		printf("SDL could not initialize! %s\n", SDL_GetError());
+        printf("SDL could not initialize! %s\n", SDL_GetError());
         exit(-1);
     }
 
     c.window = SDL_CreateWindow("", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, WINDOW_FLAGS);
     if (c.window == NULL) {
-		printf("Window could not be created! %s\n", SDL_GetError());
+        printf("Window could not be created! %s\n", SDL_GetError());
         exit(-1);
     }
 
@@ -41,7 +41,7 @@ RenderContext render_context_create() {
     }
 
     if (!(IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG)) {
-		printf( "SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError());
+        printf( "SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError());
         exit(-1);
     } 
 
