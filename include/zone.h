@@ -9,7 +9,7 @@ typedef struct Zone {
 } Zone;
 
 Zone zone_create(int width, int height);
-void zone_draw(Zone zone, RenderContext context);
+void zone_draw(Zone zone);
 int zone_get_tile_id_at(Zone zone, int x, int y);
 void zone_destroy(Zone zone);
 

@@ -16,11 +16,11 @@ Zone zone_create(int width, int height) {
     return z;
 }
 
-void zone_draw(Zone zone, RenderContext context) {
+void zone_draw(Zone zone) {
     for (int x = 0; x < zone.width; x++) {
         for (int y = 0; y < zone.height; y++) {
             int tile_id = zone_get_tile_id_at(zone, x, y);
-            render_context_draw_tile(context, tile_id, x, y);
+            graphics_draw_tile(tile_id, x, y);
         }
     }
 }
